@@ -29,4 +29,18 @@
 
 
 
+- (IBAction)actionFirstName:(UITextField *)sender {
+}
+
+- (IBAction)actionLastName:(UITextField *)sender {
+}
+
+- (IBAction)actionDateOfBirth:(UITextField *)sender {
+}
+
+- (IBAction)actionGender:(UISegmentedControl *)sender {
+}
+
+- (IBAction)actionGrade:(UITextField *)sender {
+}
 @end

@@ -24,7 +24,7 @@
         <!--MNStudentViewController-->
         <scene sceneID="XhN-rw-PK2">
             <objects>
-                <tableViewController title="MNStudentViewController" id="3hp-SM-Meg" sceneMemberID="viewController">
+                <tableViewController title="MNStudentViewController" id="3hp-SM-Meg" customClass="MNStudentViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="pug-IZ-vqv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="next"/>
                                                     <connections>
+                                                        <action selector="actionFirstName:" destination="3hp-SM-Meg" eventType="touchUpInside" id="NFd-oB-vTA"/>
                                                         <outlet property="delegate" destination="3hp-SM-Meg" id="egV-3f-YMo"/>
                                                     </connections>
                                                 </textField>
@@ -71,6 +72,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="done"/>
                                                     <connections>
+                                                        <action selector="actionLastName:" destination="3hp-SM-Meg" eventType="touchUpInside" id="2pI-VW-GoZ"/>
                                                         <outlet property="delegate" destination="3hp-SM-Meg" id="Fby-aJ-JyQ"/>
                                                     </connections>
                                                 </textField>
@@ -96,6 +98,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="actionDateOfBirth:" destination="3hp-SM-Meg" eventType="touchUpInside" id="qhu-u7-odf"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jdU-YJ-wWP">
                                                     <rect key="frame" x="8" y="11" width="146" height="21"/>
@@ -128,6 +133,9 @@
                                                         <segment title="Men"/>
                                                         <segment title="Women"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="actionGender:" destination="3hp-SM-Meg" eventType="valueChanged" id="Kkl-PI-VuP"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -144,6 +152,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="actionGrade:" destination="3hp-SM-Meg" eventType="touchUpInside" id="7Gy-1Q-B5c"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cA5-IR-efd">
                                                     <rect key="frame" x="8" y="11" width="146" height="21"/>
@@ -164,6 +175,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="qN5-C4-2Ni"/>
+                    <connections>
+                        <outlet property="dateOfBirthField" destination="8ra-d6-wt3" id="tO4-zj-mSl"/>
+                        <outlet property="firstNameField" destination="XOf-bc-7OX" id="QFH-To-27o"/>
+                        <outlet property="genderSegmentedControl" destination="qsD-za-lJy" id="sxx-Hl-SYz"/>
+                        <outlet property="gradeField" destination="no3-th-5CA" id="4Hp-it-aW1"/>
+                        <outlet property="lastNameField" destination="gPr-za-Gv0" id="k7e-5w-s2q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wga-fp-J2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
