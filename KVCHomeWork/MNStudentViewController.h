@@ -18,15 +18,4 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *gradeField;
 
-
-#pragma mark - Actions
-
-- (IBAction)actionFirstName:(UITextField *)sender;
-- (IBAction)actionLastName:(UITextField *)sender;
-- (IBAction)actionDateOfBirth:(UITextField *)sender;
-- (IBAction)actionGender:(UISegmentedControl *)sender;
-- (IBAction)actionGrade:(UITextField *)sender;
-
-
-
 @end
