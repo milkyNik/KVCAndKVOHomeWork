@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		88A605191DAE6264001FEB4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A605181DAE6264001FEB4B /* main.m */; };
 		88A6051C1DAE6264001FEB4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A6051B1DAE6264001FEB4B /* AppDelegate.m */; };
-		88A6051F1DAE6264001FEB4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A6051E1DAE6264001FEB4B /* ViewController.m */; };
 		88A605221DAE6264001FEB4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A605201DAE6264001FEB4B /* Main.storyboard */; };
 		88A605241DAE6264001FEB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A605231DAE6264001FEB4B /* Assets.xcassets */; };
 		88A605271DAE6264001FEB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A605251DAE6264001FEB4B /* LaunchScreen.storyboard */; };
 		88A605301DAE6BBE001FEB4B /* MNStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A6052F1DAE6BBE001FEB4B /* MNStudent.m */; };
+		88A605361DAE6D99001FEB4B /* MNStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A605351DAE6D99001FEB4B /* MNStudentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +21,14 @@
 		88A605181DAE6264001FEB4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88A6051A1DAE6264001FEB4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		88A6051B1DAE6264001FEB4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		88A6051D1DAE6264001FEB4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		88A6051E1DAE6264001FEB4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		88A605211DAE6264001FEB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88A605231DAE6264001FEB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88A605261DAE6264001FEB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88A605281DAE6264001FEB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A6052E1DAE6BBE001FEB4B /* MNStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNStudent.h; sourceTree = "<group>"; };
 		88A6052F1DAE6BBE001FEB4B /* MNStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNStudent.m; sourceTree = "<group>"; };
+		88A605341DAE6D99001FEB4B /* MNStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNStudentViewController.h; sourceTree = "<group>"; };
+		88A605351DAE6D99001FEB4B /* MNStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNStudentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,8 @@
 				88A6051B1DAE6264001FEB4B /* AppDelegate.m */,
 				88A6052E1DAE6BBE001FEB4B /* MNStudent.h */,
 				88A6052F1DAE6BBE001FEB4B /* MNStudent.m */,
-				88A6051D1DAE6264001FEB4B /* ViewController.h */,
-				88A6051E1DAE6264001FEB4B /* ViewController.m */,
+				88A605341DAE6D99001FEB4B /* MNStudentViewController.h */,
+				88A605351DAE6D99001FEB4B /* MNStudentViewController.m */,
 				88A605201DAE6264001FEB4B /* Main.storyboard */,
 				88A605231DAE6264001FEB4B /* Assets.xcassets */,
 				88A605251DAE6264001FEB4B /* LaunchScreen.storyboard */,
@@ -155,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A605301DAE6BBE001FEB4B /* MNStudent.m in Sources */,
-				88A6051F1DAE6264001FEB4B /* ViewController.m in Sources */,
+				88A605361DAE6D99001FEB4B /* MNStudentViewController.m in Sources */,
 				88A6051C1DAE6264001FEB4B /* AppDelegate.m in Sources */,
 				88A605191DAE6264001FEB4B /* main.m in Sources */,
 			);
