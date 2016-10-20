@@ -7,8 +7,12 @@
 //
 
 #import "MNStudentViewController.h"
+#import "MNDateViewController.h"
+#import "MNStudent.h"
 
-@interface MNStudentViewController ()
+@interface MNStudentViewController () <MNDateViewDelegate>
+
+@property (strong, nonatomic) MNStudent* student;
 
 @end
 
@@ -16,7 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.student = [[MNStudent alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +38,14 @@
     if ([textField isEqual:self.dateOfBirthField]) {
         
         NSLog(@"dateOfBirthField");
+        
+        MNDateViewController* dateController = [self.storyboard instantiateViewControllerWithIdentifier:@"MNDateViewController"];
+        
+        dateController.delegate = self;
+        
+        [self.navigationController pushViewController:dateController animated:YES];
+        
+        
         return NO;
         
     }
@@ -57,6 +71,28 @@
     
     return YES;
     
+}
+
+#pragma mark - MNDateViewDelegate
+
+- (void)datePicker:(UIDatePicker *)datePicker didChangeDate:(NSDate *)date {
+    
+    self.student.dateOfBirth = date;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.MM.yyyy"];
+    
+    self.dateOfBirthField.text = [formatter stringFromDate:date];
+    
+}
+
+- (NSDate*) getDate {
+    
+    if (self.student.dateOfBirth) {
+        return self.student.dateOfBirth;
+    }
+    
+    return [NSDate date];
 }
 
 @end
