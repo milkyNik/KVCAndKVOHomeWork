@@ -27,5 +27,36 @@
 
 #pragma mark - UITextFieldDelegate
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    if ([textField isEqual:self.dateOfBirthField]) {
+        
+        NSLog(@"dateOfBirthField");
+        return NO;
+        
+    }
+    
+    if ([textField isEqual:self.gradeField]) {
+        
+        NSLog(@"gradeField");
+        return NO;
+        
+    }
+    
+    return YES;
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if ([textField isEqual:self.firstNameField]) {
+        [self.lastNameField becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
+    
+}
 
 @end
