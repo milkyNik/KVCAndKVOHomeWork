@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8810CAD11DB943FD00D4C3A7 /* MNDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810CAD01DB943FD00D4C3A7 /* MNDateViewController.m */; };
+		8810CAD41DB9540F00D4C3A7 /* MNGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810CAD31DB9540F00D4C3A7 /* MNGradeViewController.m */; };
 		88A605191DAE6264001FEB4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A605181DAE6264001FEB4B /* main.m */; };
 		88A6051C1DAE6264001FEB4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A6051B1DAE6264001FEB4B /* AppDelegate.m */; };
 		88A605221DAE6264001FEB4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A605201DAE6264001FEB4B /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* Begin PBXFileReference section */
 		8810CACF1DB943FD00D4C3A7 /* MNDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDateViewController.h; sourceTree = "<group>"; };
 		8810CAD01DB943FD00D4C3A7 /* MNDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNDateViewController.m; sourceTree = "<group>"; };
+		8810CAD21DB9540F00D4C3A7 /* MNGradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNGradeViewController.h; sourceTree = "<group>"; };
+		8810CAD31DB9540F00D4C3A7 /* MNGradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNGradeViewController.m; sourceTree = "<group>"; };
 		88A605141DAE6264001FEB4B /* KVCHomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVCHomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A605181DAE6264001FEB4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88A6051A1DAE6264001FEB4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				88A605351DAE6D99001FEB4B /* MNStudentViewController.m */,
 				8810CACF1DB943FD00D4C3A7 /* MNDateViewController.h */,
 				8810CAD01DB943FD00D4C3A7 /* MNDateViewController.m */,
+				8810CAD21DB9540F00D4C3A7 /* MNGradeViewController.h */,
+				8810CAD31DB9540F00D4C3A7 /* MNGradeViewController.m */,
 				88A605201DAE6264001FEB4B /* Main.storyboard */,
 				88A605231DAE6264001FEB4B /* Assets.xcassets */,
 				88A605251DAE6264001FEB4B /* LaunchScreen.storyboard */,
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A605301DAE6BBE001FEB4B /* MNStudent.m in Sources */,
+				8810CAD41DB9540F00D4C3A7 /* MNGradeViewController.m in Sources */,
 				88A605361DAE6D99001FEB4B /* MNStudentViewController.m in Sources */,
 				88A6051C1DAE6264001FEB4B /* AppDelegate.m in Sources */,
 				88A605191DAE6264001FEB4B /* main.m in Sources */,

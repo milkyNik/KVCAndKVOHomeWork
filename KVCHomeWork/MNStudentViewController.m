@@ -8,6 +8,7 @@
 
 #import "MNStudentViewController.h"
 #import "MNDateViewController.h"
+#import "MNGradeViewController.h"
 #import "MNStudent.h"
 
 @interface MNStudentViewController () <MNDateViewDelegate>
@@ -53,6 +54,11 @@
     if ([textField isEqual:self.gradeField]) {
         
         NSLog(@"gradeField");
+        
+        MNGradeViewController* gradeController = [self.storyboard instantiateViewControllerWithIdentifier:@"MNGradeViewController"];
+        
+        [self.navigationController pushViewController:gradeController animated:YES];
+        
         return NO;
         
     }
