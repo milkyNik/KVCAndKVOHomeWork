@@ -27,6 +27,18 @@
     
     self.navigationItem.title = @"Student Info";
     
+    if (self.student.firstName) {
+        self.firstNameField.text = self.student.firstName;
+    }
+    
+    if (self.student.lastName) {
+        self.lastNameField.text = self.student.lastName;
+    }
+    
+    if (self.student.gender) {
+        [self.genderSegmentedControl setSelectedSegmentIndex:self.student.gender];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +50,14 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    if ([textField isEqual:self.firstNameField]) {
+        self.student.firstName = textField.text;
+    }
+    
+    if ([textField isEqual:self.lastNameField]) {
+        self.student.lastName = textField.text;
+    }
     
     if ([textField isEqual:self.dateOfBirthField]) {
         
@@ -127,4 +147,11 @@
     
 }
 
+#pragma mark - Actions
+
+- (IBAction)actionGenderSegmentedControl:(UISegmentedControl *)sender {
+    
+    self.student.gender = sender.selectedSegmentIndex;
+    
+}
 @end

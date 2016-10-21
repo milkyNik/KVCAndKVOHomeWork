@@ -131,6 +131,9 @@
                                                         <segment title="Men"/>
                                                         <segment title="Women"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="actionGenderSegmentedControl:" destination="3hp-SM-Meg" eventType="valueChanged" id="e8N-ER-1wZ"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>

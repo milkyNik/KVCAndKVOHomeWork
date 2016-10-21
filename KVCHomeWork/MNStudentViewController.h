@@ -20,4 +20,5 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *gradeField;
 
+- (IBAction)actionGenderSegmentedControl:(UISegmentedControl *)sender;
 @end
