@@ -9,9 +9,10 @@
 #import "MNStudentViewController.h"
 #import "MNDateViewController.h"
 #import "MNGradeViewController.h"
+#import "MNGradeViewController.h"
 #import "MNStudent.h"
 
-@interface MNStudentViewController () <MNDateViewDelegate>
+@interface MNStudentViewController () <MNDateViewDelegate, MNGradeViewDelegate>
 
 @property (strong, nonatomic) MNStudent* student;
 
@@ -23,6 +24,8 @@
     [super viewDidLoad];
     
     self.student = [[MNStudent alloc] init];
+    
+    self.navigationItem.title = @"Student Info";
     
 }
 
@@ -56,6 +59,8 @@
         NSLog(@"gradeField");
         
         MNGradeViewController* gradeController = [self.storyboard instantiateViewControllerWithIdentifier:@"MNGradeViewController"];
+        
+        gradeController.delegate = self;
         
         [self.navigationController pushViewController:gradeController animated:YES];
         
@@ -99,6 +104,27 @@
     }
     
     return [NSDate date];
+}
+
+#pragma mark - MNGradeViewDelegate
+
+- (void) gradePicker:(UIPickerView*) gradePicker didChangeRow:(NSInteger) row {
+    
+    
+    self.student.grade = row + 1;
+    
+    self.gradeField.text = [NSString stringWithFormat:@"%ld",(long)row + 1];
+
+}
+
+- (NSInteger) getGrade {
+    
+    if (self.student.grade) {
+        return self.student.grade - 1;
+    } else {
+        return 0;
+    }
+    
 }
 
 @end

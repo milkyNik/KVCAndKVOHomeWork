@@ -20,6 +20,11 @@
     [super viewDidLoad];
     
     self.gradesArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+
+    [self.gradePicker selectRow:[self.delegate getGrade]
+                    inComponent:0
+                       animated:YES];
+    
     
 }
 
@@ -44,5 +49,12 @@ numberOfRowsInComponent:(NSInteger)component
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return self.gradesArray[row];
 }
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+
+    [self.delegate gradePicker:pickerView didChangeRow:row];
+    
+}
+
 
 @end

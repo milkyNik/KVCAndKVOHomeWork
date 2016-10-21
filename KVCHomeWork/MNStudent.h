@@ -25,6 +25,6 @@ typedef enum {
 @property (strong, nonatomic) NSString* lastName;
 @property (strong, nonatomic) NSDate* dateOfBirth;
 @property (assign, nonatomic) MNStudentGender gender;
-@property (assign, nonatomic) NSUInteger grade;
+@property (assign, nonatomic) NSInteger grade;
 
 @end
