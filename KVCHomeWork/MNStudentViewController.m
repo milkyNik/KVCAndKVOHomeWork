@@ -39,6 +39,33 @@
         [self.genderSegmentedControl setSelectedSegmentIndex:self.student.gender];
     }
     
+    
+    [self.student addObserver:self
+                   forKeyPath:@"firstName"
+                      options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                      context:nil];
+    
+    [self.student addObserver:self
+                   forKeyPath:@"lastName"
+                      options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                      context:nil];
+    
+    [self.student addObserver:self
+                   forKeyPath:@"dateOfBirth"
+                      options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                      context:nil];
+    
+    [self.student addObserver:self
+                   forKeyPath:@"gender"
+                      options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                      context:nil];
+    
+    [self.student addObserver:self
+                   forKeyPath:@"grade"
+                      options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                      context:nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,8 +73,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    
+    [self.student removeObserver:self forKeyPath:@"firstName"];
+    [self.student removeObserver:self forKeyPath:@"lastName"];
+    [self.student removeObserver:self forKeyPath:@"dateOfBirth"];
+    [self.student removeObserver:self forKeyPath:@"gender"];
+    [self.student removeObserver:self forKeyPath:@"grade"];
+    
+}
+
 
 #pragma mark - UITextFieldDelegate
+
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
@@ -154,4 +192,14 @@
     self.student.gender = sender.selectedSegmentIndex;
     
 }
+
+#pragma mark - Observing
+
+
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context {
+    
+    NSLog(@"\nkeyPath: %@\nobject: %@\nchange: %@", keyPath, object, change);
+    
+}
+
 @end
