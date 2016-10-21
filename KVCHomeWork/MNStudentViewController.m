@@ -193,6 +193,22 @@
     
 }
 
+- (IBAction)actionReload:(UIBarButtonItem *)sender {
+
+    [self.student reload];
+    
+    self.firstNameField.text = self.student.firstName;
+    
+    self.lastNameField.text = self.student.lastName;
+    
+    self.dateOfBirthField.text = @"";
+    
+    [self.genderSegmentedControl setSelectedSegmentIndex:self.student.gender];
+    
+    self.gradeField.text = @"";
+    
+}
+
 #pragma mark - Observing
 
 

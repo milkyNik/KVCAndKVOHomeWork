@@ -172,7 +172,13 @@
                             <outlet property="delegate" destination="3hp-SM-Meg" id="EDQ-ub-ViL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qN5-C4-2Ni"/>
+                    <navigationItem key="navigationItem" id="qN5-C4-2Ni">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Qot-mU-fhh">
+                            <connections>
+                                <action selector="actionReload:" destination="3hp-SM-Meg" id="cZZ-Ld-IFn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateOfBirthField" destination="8ra-d6-wt3" id="tO4-zj-mSl"/>
                         <outlet property="firstNameField" destination="XOf-bc-7OX" id="QFH-To-27o"/>
