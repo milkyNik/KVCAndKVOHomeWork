@@ -7,6 +7,7 @@
 //
 
 
+
 #import "AppDelegate.h"
 #import "MNStudent.h"
 
@@ -37,6 +38,11 @@
     student3.firstName = @"Bob";
     student4.firstName = @"Maty";
     
+    student1.grade = 5;
+    student2.grade = 9;
+    student3.grade = 7;
+    student4.grade = 4;
+    
     self.students = @[student1, student2, student3, student4];
     
     [student3 addObserver:self
@@ -44,10 +50,19 @@
                   options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                   context:nil];
     
-    [student1 setValue:@"Test Name" forKeyPath:@"friendStudent.firstName"];
-    [student1 setValue:@"Bad Name" forKeyPath:@"friendStudent.friendStudent.firstName"];
-    [student1 setValue:@"True Name" forKeyPath:@"friendStudent.friendStudent.friendStudent.firstName"];
-    [student1 setValue:@"False Name" forKeyPath:@"friendStudent.friendStudent.friendStudent.friendStudent.firstName"];
+    //[student1 setValue:@"Test Name" forKeyPath:@"friendStudent.firstName"];
+    //[student1 setValue:@"Bad Name" forKeyPath:@"friendStudent.friendStudent.firstName"];
+    //[student1 setValue:@"True Name" forKeyPath:@"friendStudent.friendStudent.friendStudent.firstName"];
+    //[student1 setValue:@"False Name" forKeyPath:@"friendStudent.friendStudent.friendStudent.friendStudent.firstName"];
+    
+    
+    NSArray* names = [self.students valueForKey:@"firstName"];
+    
+    NSNumber* sumGrade = [self.students valueForKeyPath:@"@sum.grade"];
+    NSNumber* avgGrade = [self.students valueForKeyPath:@"@avg.grade"];
+    
+    NSLog(@"%@", sumGrade);
+    NSLog(@"%@", avgGrade);
     
     return YES;
 }
