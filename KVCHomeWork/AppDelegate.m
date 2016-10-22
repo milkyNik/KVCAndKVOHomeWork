@@ -7,10 +7,12 @@
 //
 
 
-
 #import "AppDelegate.h"
+#import "MNStudent.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) NSArray* students;
 
 @end
 
@@ -19,7 +21,47 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    MNStudent* student1 = [[MNStudent alloc] init];
+    MNStudent* student2 = [[MNStudent alloc] init];
+    MNStudent* student3 = [[MNStudent alloc] init];
+    MNStudent* student4 = [[MNStudent alloc] init];
+
+    student1.friendStudent = student4;
+    student2.friendStudent = student1;
+    student3.friendStudent = student2;
+    student4.friendStudent = student3;
+    
+    student1.firstName = @"Nik";
+    student2.firstName = @"Alex";
+    student3.firstName = @"Bob";
+    student4.firstName = @"Maty";
+    
+    self.students = @[student1, student2, student3, student4];
+    
+    [student3 addObserver:self
+               forKeyPath:@"firstName"
+                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                  context:nil];
+    
+    [student1 setValue:@"Test Name" forKeyPath:@"friendStudent.firstName"];
+    [student1 setValue:@"Bad Name" forKeyPath:@"friendStudent.friendStudent.firstName"];
+    [student1 setValue:@"True Name" forKeyPath:@"friendStudent.friendStudent.friendStudent.firstName"];
+    [student1 setValue:@"False Name" forKeyPath:@"friendStudent.friendStudent.friendStudent.friendStudent.firstName"];
+    
     return YES;
+}
+
+- (void)dealloc {
+    
+    [self.students[2] removeObserver:self];
+    
+}
+
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context {
+    
+    NSLog(@"\nkeyPath: %@\nobject: %@\nchange: %@", keyPath, object, change);
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

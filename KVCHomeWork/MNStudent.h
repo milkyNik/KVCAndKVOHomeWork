@@ -27,6 +27,10 @@ typedef enum {
 @property (assign, nonatomic) MNStudentGender gender;
 @property (assign, nonatomic) NSInteger grade;
 
+@property (weak, nonatomic) MNStudent* friendStudent;
+
+
+
 - (void) reload;
 
 @end
